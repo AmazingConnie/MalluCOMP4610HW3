@@ -1,0 +1,69 @@
+<!--
+Name: Rohan Mallu
+Date Created: October 15th 2024
+File: index.html
+GUI Assignment: Creating an Interactive Table
+Description: HTML file for HW3. This is where the user will input numbers for the table
+-->
+
+<!--
+ Resources:
+ - onClick() with JS: https://www.w3schools.com/js/tryit.asp?filename=tryjs_whereto_url 
+ - HTML Forms (for general reference): https://www.w3schools.com/html/html_forms.asp 
+-->
+
+<!doctype html>
+<html lang = "en">
+    <head>
+        <meta-charset="utf-8">
+        <title>Creating an Interactive Dynamic Table </title>   
+        <link rel="stylesheet" type="text/css" href="css/styles.css">    
+    </head>
+    <body>
+            <!-- Website Page Title -->
+            <h1>Interactive Dynamic Table</h1>
+
+            <!-- Form for entering numbers -->
+            <form>
+              <p id="instructions">Please enter the table ranges:</p>
+                    <!-- Input the minimum number of columns -->
+                    <div class = "inputNum">
+                        <label for="minCols">Minimum Column Value (between -50 to 50):</label>
+                        <input type="text" id="minCol" placeholder="Enter value here">
+                        <p id="minColError"></p>
+                    </div>
+                    
+                    <!-- Input the maximum number of columns -->
+                    <div class = "inputNum">
+                        <label for="maxCols">Maximum Column Value (between -50 to 50):</label>
+                        <input type="text" id="maxCol" placeholder="Enter value here">
+                        <p id="maxColError"></p>
+                    </div>
+         
+                    <!-- Input the minimum number of rows -->
+                    <div class = "inputNum">
+                        <label for="minRows">Minimum Row Value (between -50 to 50):</label>
+                        <input type="text" id="minRow" placeholder="Enter value here">
+                        <p id="minRowError"></p>
+                    </div>
+
+                    <!-- Input the maximum number of rows -->
+                    <div class = "inputNum">
+                        <label for="maxRows">Maximum Row Value (between -50 to 50):</label>
+                        <input type="text" id="maxRow" placeholder="Enter value here">
+                        <p id="maxRowError"></p>
+                    </div>
+                   
+                <!-- When user hits submit, the button invokes a function that dynamically creates the table -->
+                <div class = "buttonFormat">
+                    <button type="button" onclick="createTable()">Submit</button>
+                    <p id="tableError"></p>
+                </div>
+            </form>
+            <br>
+            <br>
+            <!-- Generate table inside the div container-->
+            <div id="table-container"></div>
+    <script src="js/index.js"></script>
+    </body>
+</html>
